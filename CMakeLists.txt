@@ -26,10 +26,13 @@ add_executable(valsim
 include_directories(${OpenCV_INCLUDE_DIRS})
 target_link_libraries(valsim ${OpenCV_LIBS})
 
-target_include_directories(valsim PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../)
+target_include_directories(valsim PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/../
+    ${CMAKE_CURRENT_SOURCE_DIR}/../bpf_tools/rpclib/include)
 target_link_directories(valsim PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/../build-commonpp-Desktop-Debug
     ${CMAKE_CURRENT_SOURCE_DIR}/../build-bpf_tools-Desktop-Debug
+    ${CMAKE_CURRENT_SOURCE_DIR}/../bpf_tools/rpclib/build
 )
 
 target_link_libraries(valsim Qt${QT_VERSION_MAJOR}::Core distlib rpc commonpp)
