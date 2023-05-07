@@ -1,0 +1,6 @@
+[submodule "commonpp"]
+	path = commonpp
+	url = https://github.com/yca/commonpp.git
+[submodule "bpf_tools"]
+	path = bpf_tools
+	url = https://github.com/yca/bpf_tools.git
